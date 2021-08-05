@@ -7,12 +7,21 @@ package Grupo5.MasterMind.main;
 
 import java.awt.*;
 
+import Grupo5.MasterMind.window.MasterMindWindow;
+import Grupo5.MasterMind.window.SelectLevelWindow;
 
-public class App 
-{
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
-        
-    }
+public class App {
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		// llamamos a la funcion que mostrara la ventana
+		showWindow();
+	}
+
+	public static void showWindow() {
+		SelectLevelWindow level = new SelectLevelWindow();
+		//MasterMindWindow window = new MasterMindWindow();
+	}
 }
