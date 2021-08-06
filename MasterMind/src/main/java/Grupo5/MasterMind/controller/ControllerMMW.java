@@ -14,12 +14,17 @@ public class ControllerMMW implements ActionListener{
 		//llamada a la funcion que mostrara la pantalla y inicializara los eventos
 		window = new MasterMindWindow();
 		event = new Events();
+		window.acercaDe.addActionListener(this);
+		window.comoJugar.addActionListener(this);
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
-		
+		if (e.getSource() ==  window.acercaDe)
+			event.acercaDe();
+		if (e.getSource() == window.comoJugar)
+			event.comoJugar();
 	}
 	
 }

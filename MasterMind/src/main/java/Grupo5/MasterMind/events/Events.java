@@ -9,10 +9,18 @@ import Grupo5.MasterMind.objects.PictureBox;
 
 public class Events {
 	static final int COLORS = 4;// Constante que pone 4 colores
+	
+	public void comoJugar() {
+		JOptionPane.showMessageDialog(null, "Se juega jugando");
+	}
+	
+	public void acercaDe() {
+		JOptionPane.showMessageDialog(null, "Alvaro Raul Evelyn");
+	}
 
 	// funcionn que crea los colores pasandoles por parametros dos listas de
 	// colores, los disponibles y la lista nueva
-	public static void crear_colores(Color c[], Color col[]) {
+	public void crear_colores(Color c[], Color col[]) {
 		int[] colores = new int[col.length]; // controlador para comparar los random con los enteros
 		int valor = 0;
 		for (int i = 0; i < col.length; i++) {
@@ -45,7 +53,7 @@ public class Events {
 		}
 	}
 
-	public static PictureBox[] crear_linea_bola() {
+	public PictureBox[] crear_linea_bola() {
 		// creamos una array que almacene picuresbox
 		PictureBox[] bolas = new PictureBox[COLORS];
 		// recorre el numero de numeros que se desea crear y se introducen picturesbox

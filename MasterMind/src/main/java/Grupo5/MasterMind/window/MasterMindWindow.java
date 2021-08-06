@@ -3,15 +3,18 @@ package Grupo5.MasterMind.window;
 import java.awt.*;
 
 import javax.swing.*;
-import net.miginfocom.swing.MigLayout;
 import javax.swing.border.BevelBorder;
-import javax.swing.border.EmptyBorder;
 
 public class MasterMindWindow {
 
 	public JFrame frame;
 	public JTable table_1;
 	public JTable table_2;
+	public JMenuBar menuBar;
+	public JMenu archivo;
+	public JMenu ayuda;
+	public JMenuItem comoJugar;
+	public JMenuItem acercaDe;
 
 	/**
 	 * Create the application.
@@ -67,15 +70,19 @@ public class MasterMindWindow {
 		/***
 		 * Barra de menu con los items incorporados
 		 */
-		JMenuBar menuBar = new JMenuBar();
+		menuBar = new JMenuBar();
 		menuBar.setBounds(0, 0, 266, 22);
 		frame.getContentPane().add(menuBar);
+		archivo = new JMenu("Archivo");
+		ayuda = new JMenu("Help");
+		comoJugar = new JMenuItem("Como jugar");
+		acercaDe = new JMenuItem("Acerca de");
+		menuBar.add(archivo);
+		menuBar.add(ayuda);
+		ayuda.add(comoJugar);
+		ayuda.add(acercaDe);
+		//acercaDe.addActionListener(new Accion());
+		//comoJugar.addActionListener(new Accion());
 
-		JMenuItem mntmNewMenuItem = new JMenuItem("Archivo");
-		menuBar.add(mntmNewMenuItem);
-
-		JMenuItem mntmNewMenuItem_1 = new JMenuItem("Help");
-		menuBar.add(mntmNewMenuItem_1);
-		
 	}
 }
