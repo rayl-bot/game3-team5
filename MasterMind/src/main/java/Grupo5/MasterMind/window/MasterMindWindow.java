@@ -10,8 +10,8 @@ import javax.swing.border.EmptyBorder;
 public class MasterMindWindow {
 
 	public JFrame frame;
-	private JTable table_1;
-	private JTable table_2;
+	public JTable table_1;
+	public JTable table_2;
 
 	/**
 	 * Create the application.
@@ -76,5 +76,6 @@ public class MasterMindWindow {
 
 		JMenuItem mntmNewMenuItem_1 = new JMenuItem("Help");
 		menuBar.add(mntmNewMenuItem_1);
+		
 	}
 }
