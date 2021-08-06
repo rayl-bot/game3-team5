@@ -67,7 +67,7 @@ public class App {
 		// de color Blanco (de momento)
 		for (int i = 0; i < COLORS; i++) {
 			bolas[i] = new PictureBox();
-			bolas[i].setBackground(Color.WHITE);
+			bolas[i].setColor(Color.WHITE);
 		}
 		//devuelve la array de bolas
 		return bolas;
