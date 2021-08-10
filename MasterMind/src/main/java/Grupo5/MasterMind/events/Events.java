@@ -12,18 +12,7 @@ public class Events {
 	static Random r = new Random(); // generamos un numero aleatorio
 	static Color[] colores = new Color[10];
 
-
-	public void comoJugar() {
-		JOptionPane.showMessageDialog(null, "Se juega jugando");
-	}
-
-	public void acercaDe() {
-		JOptionPane.showMessageDialog(null, "Alvaro Raul Evelyn");
-	}
-
-	// funcionn que crea los colores pasandoles por parametros dos listas de
-	// colores, los disponibles y la lista nueva
-	public void crear_colores( PictureBox[] bolacolores) {
+	public void llenarLista() {
         colores[0]=(Color.yellow);
         colores[1]=(Color.blue);
         colores[2]=(Color.cyan);
@@ -35,6 +24,18 @@ public class Events {
         colores[8]=(Color.orange);
         colores[9]=(Color.pink);
         colores[10]=(Color.red);
+	}
+	public void comoJugar() {
+		JOptionPane.showMessageDialog(null, "Se juega jugando");
+	}
+
+	public void acercaDe() {
+		JOptionPane.showMessageDialog(null, "Alvaro Raul Evelyn");
+	}
+
+	// funcionn que crea los colores pasandoles por parametros dos listas de
+	// colores, los disponibles y la lista nueva
+	public void crear_colores( PictureBox[] bolacolores) {
 		int[] coloresNum = new int[bolacolores.length]; // controlador para comparar los random con los enteros
 		int valor = 0;
 		for (int i = 0; i < bolacolores.length; i++) {
