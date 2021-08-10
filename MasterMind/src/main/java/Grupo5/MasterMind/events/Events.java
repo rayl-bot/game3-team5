@@ -10,7 +10,7 @@ import Grupo5.MasterMind.objects.PictureBox;
 public class Events {
 	static final int COLORS = 4;// Constante que pone 4 colores
 	static Random r = new Random(); // generamos un numero aleatorio
-	static Color[] colores = new Color[12];
+	static Color[] colores = new Color[10];
 
 
 	public void comoJugar() {
