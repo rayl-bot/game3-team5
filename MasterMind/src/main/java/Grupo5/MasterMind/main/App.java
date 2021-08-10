@@ -10,9 +10,10 @@ import java.util.*;
 
 import Grupo5.MasterMind.controller.ControllerMMW;
 import Grupo5.MasterMind.objects.PictureBox;
+import Grupo5.MasterMind.window.SelectLevelWindow;
 
 public class App {
-	
+
 	/**
 	 * Launch the application.
 	 */
@@ -20,10 +21,9 @@ public class App {
 		// llamamos a la funcion que mostrara la ventana
 		showWindow();
 	}
-	
+
 	public static void showWindow() {
-		//SelectLevelWindow level = new SelectLevelWindow();
-		ControllerMMW controlMMW = new ControllerMMW();
+		SelectLevelWindow level = new SelectLevelWindow();
+		//ControllerMMW controlMMW = new ControllerMMW();
 	}
-	
 }

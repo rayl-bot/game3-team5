@@ -1,30 +1,26 @@
 package Grupo5.MasterMind.objects;
 
 import java.awt.Color;
+import java.awt.Dimension;
 
-import javax.swing.JComponent;
+import javax.accessibility.AccessibleContext;
+import javax.swing.JButton;
 
-public class PictureBox extends JComponent{
-	private Color color;
+public class PictureBox extends JButton{
 	
 	public PictureBox () {
-		this.color = Color.RED;
-		this.setBounds(54, 82, 100, 100);
-	}
-
-	/**
-	 * @return the color
-	 */
-	public Color getColor() {
-		return color;
-	}
-
-	/**
-	 * @param color the color to set
-	 */
-	public void setColor(Color color) {
-		this.color = color;
-		this.setBackground(this.color);
+		this.setBorder(null);
+		this.setOpaque(true);
+		this.setContentAreaFilled(false);
+		this.setBackground(Color.RED);
+		this.setForeground(Color.BLACK);
+		this.setPreferredSize(new Dimension(30,30));
+		this.setOpaque(true);
+		this.setSize(30, 30);
 	}
 	
+	public void setColor(Color c) {
+		this.setBackground(c);
+		this.setForeground(Color.BLACK);
+	}
 }

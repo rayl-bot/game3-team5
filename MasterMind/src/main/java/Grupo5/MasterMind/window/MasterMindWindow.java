@@ -95,17 +95,11 @@ public class MasterMindWindow {
 		//acercaDe.addActionListener(new Accion());
 		//comoJugar.addActionListener(new Accion());
 		
-		/*PictureBox[] pb = event.crear_linea_bola();
+		PictureBox[] pb = event.crear_linea_bola();
 		//array que recorre los picturebox y los muestra por pantalla
 		for (int i = 0; i < pb.length; i++) {
-			pb[i].setBounds(5, 100, 200, 100);
 			panel_2.add(pb[i]);
-		}*/
-		PictureBox pb = new PictureBox();
-		JButton caca = new JButton("Hola buenas tardes");
-		pb.setVisible(true);
-		panel_2.add(pb);
-		//panel_2.add(caca);
+		}
 		frame.getContentPane().add(panel_2);
 
 	}
