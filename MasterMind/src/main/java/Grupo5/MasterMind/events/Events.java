@@ -10,11 +10,28 @@ import Grupo5.MasterMind.objects.PictureBox;
 public class Events {
 	static final int COLORS = 4;// Constante que pone 4 colores
 	static Random r = new Random(); // generamos un numero aleatorio
-	static Color[] colores = new Color[10];
+	static Color[] colores = new Color[11];
 	public static PictureBox[] bolasolucion = new PictureBox[4];
 	public static PictureBox[] bolas = new PictureBox[4];
 	public static PictureBox[] bolaresul = new PictureBox[4];
-	public static PictureBox[] bolacolores = new PictureBox[4];
+	public static PictureBox[] bolacolores;
+	public static int coloresPosibles = 4;
+	public int intentos = 10;
+	public int numeroIntentos = 0;
+
+	public void nivelPorDefecto() {
+		bolacolores = new PictureBox[coloresPosibles];
+	}
+	public void nivelMedio() {
+		coloresPosibles = 5;
+		intentos = 8;
+		bolacolores = new PictureBox[coloresPosibles];
+	}
+	public void nivelDificil() {
+		coloresPosibles = 6;
+		intentos = 6;
+		bolacolores = new PictureBox[coloresPosibles];
+	}
 
 	public void llenarLista() {
 		colores[0] = (Color.yellow);
@@ -37,27 +54,34 @@ public class Events {
 	public void acercaDe() {
 		JOptionPane.showMessageDialog(null, "Alvaro Raul Evelyn");
 	}
+	public void perder() {
+		JOptionPane.showMessageDialog(null, "Lo siento has superado los intentos");
+	}
 
 	public void comprobarAciertos(PictureBox[] bolasolucion, PictureBox[] bolas, PictureBox[] bolaresul) {
-		int cont = 0, cont2=0;
+		int cont = 0, cont2 = 0;
 		for (int i = 0; i < bolas.length; i++) {
 			if (bolasolucion[i].getColor() == bolas[i].getColor()) {
 				bolaresul[cont].setColor(Color.black);
 				cont++;
 			}
 		}
-		cont=0;
+		cont = 0;
 		for (int i = 0; i < bolas.length; i++) {
 			for (int j = 0; j < bolas.length; j++) {
-				if (bolasolucion[i].getColor()==bolas[j].getColor()) {
+				if (bolasolucion[i].getColor() == bolas[j].getColor()) {
 					cont2++;
 				}
-				if (bolaresul[cont].getColor()!=Color.black&&cont2>0) {
+				if (bolaresul[cont].getColor() != Color.black && cont2 > 0) {
 					bolaresul[cont].setColor(Color.white);
 				}
 				cont++;
-				
+
 			}
+		}
+		numeroIntentos++;
+		if (numeroIntentos>=intentos) {
+			perder();
 		}
 	}
 
