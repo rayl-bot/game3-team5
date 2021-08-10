@@ -24,6 +24,6 @@ public class PictureBox extends JButton{
 		this.setForeground(Color.BLACK);
 	}
 	public void getColor(){
-		this.getBackground()
+		this.getBackground();
 	}
 }
