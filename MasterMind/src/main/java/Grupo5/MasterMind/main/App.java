@@ -1,15 +1,4 @@
 package Grupo5.MasterMind.main;
-
-/**
- * Hello world!
- *
- */
-
-import java.awt.*;
-import java.util.*;
-
-import Grupo5.MasterMind.controller.ControllerMMW;
-import Grupo5.MasterMind.objects.PictureBox;
 import Grupo5.MasterMind.window.SelectLevelWindow;
 
 public class App {

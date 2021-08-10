@@ -3,7 +3,6 @@ package Grupo5.MasterMind.objects;
 import java.awt.Color;
 import java.awt.Dimension;
 
-import javax.accessibility.AccessibleContext;
 import javax.swing.JButton;
 
 public class PictureBox extends JButton{

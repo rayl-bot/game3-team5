@@ -2,21 +2,11 @@ package Grupo5.MasterMind.window;
 
 import javax.swing.JFrame;
 import java.awt.GridLayout;
-import java.awt.GridBagLayout;
-import javax.swing.BoxLayout;
 import javax.swing.ButtonGroup;
 
-import java.awt.FlowLayout;
 import javax.swing.JRadioButton;
 import javax.swing.JButton;
-import javax.swing.Box;
 import java.awt.Font;
-import java.awt.Choice;
-import javax.swing.JCheckBoxMenuItem;
-import javax.swing.JRadioButtonMenuItem;
-import javax.swing.JMenuItem;
-import javax.swing.JMenu;
-import javax.swing.JMenuBar;
 import javax.swing.JPanel;
 import java.awt.Color;
 import javax.swing.border.BevelBorder;
@@ -38,6 +28,7 @@ public class SelectLevelWindow extends JFrame{
 		/***
 		 * creacion de ventana de nivel
 		 */
+		this.setTitle("SELECCIONAR NIVEL");
 		this.setBounds(100, 100, 372, 456);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.getContentPane().setLayout(null);

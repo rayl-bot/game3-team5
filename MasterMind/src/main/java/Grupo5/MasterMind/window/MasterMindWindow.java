@@ -8,8 +8,7 @@ public class MasterMindWindow {
 
 	public JFrame frame;
 	public JMenuBar menuBar;
-	public JMenu archivo;
-	public JMenu ayuda;
+	public JMenu ayuda, opciones, archivo;
 	public JMenuItem comoJugar, nuevoJuego, salir;
 	public JMenuItem acercaDe;
 	public JPanel pDisponibles,pSecreta, pResultado, pSelect;
@@ -59,11 +58,13 @@ public class MasterMindWindow {
 		frame.getContentPane().add(menuBar);
 		archivo = new JMenu("Archivo");
 		ayuda = new JMenu("Help");
+		opciones = new JMenu("Opciones");
 		comoJugar = new JMenuItem("Como jugar");
 		acercaDe = new JMenuItem("Acerca de");
 		nuevoJuego = new JMenuItem("New Game");
 		salir = new JMenuItem("Exit");
 		menuBar.add(archivo);
+		menuBar.add(opciones);
 		menuBar.add(ayuda);
 		ayuda.add(comoJugar);
 		ayuda.add(acercaDe);
