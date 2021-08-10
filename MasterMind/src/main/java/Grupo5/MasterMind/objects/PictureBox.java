@@ -8,6 +8,7 @@ import javax.swing.JButton;
 public class PictureBox extends JButton{
 	
 	public PictureBox () {
+		super();
 		this.setBorder(null);
 		this.setOpaque(true);
 		this.setContentAreaFilled(false);

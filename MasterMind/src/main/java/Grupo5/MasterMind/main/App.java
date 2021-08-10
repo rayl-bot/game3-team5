@@ -1,4 +1,5 @@
 package Grupo5.MasterMind.main;
+import Grupo5.MasterMind.window.ColorDialog;
 import Grupo5.MasterMind.window.SelectLevelWindow;
 
 public class App {
@@ -12,7 +13,8 @@ public class App {
 	}
 
 	public static void showWindow() {
-		SelectLevelWindow level = new SelectLevelWindow();
+		//SelectLevelWindow level = new SelectLevelWindow();
+		ColorDialog cd = new ColorDialog();
 		//ControllerMMW controlMMW = new ControllerMMW();
 	}
 }
