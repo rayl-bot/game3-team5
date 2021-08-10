@@ -5,14 +5,18 @@ import java.awt.*;
 import javax.swing.*;
 import javax.swing.border.BevelBorder;
 
+import Grupo5.MasterMind.events.Events;
+import Grupo5.MasterMind.objects.PictureBox;
+
 public class MasterMindWindow {
 
 	public JFrame frame;
 	public JMenuBar menuBar;
 	public JMenu archivo;
 	public JMenu ayuda;
-	public JMenuItem comoJugar;
+	public JMenuItem comoJugar, nuevoJuego, salir;
 	public JMenuItem acercaDe;
+	private Events event = new Events();
 
 	/**
 	 * Create the application.
@@ -29,11 +33,12 @@ public class MasterMindWindow {
 		 * creacion de la ventana principal
 		 */
 		frame = new JFrame();
-		frame.getContentPane().setBackground(Color.LIGHT_GRAY);
+		frame.getContentPane().setBackground(UIManager.getColor("Button.background"));
 		frame.setTitle("Master Mind");
 		frame.setBounds(100, 100, 640, 378);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
+		
 
 		/***
 		 * labels de la pantalla principal del juego
@@ -59,10 +64,14 @@ public class MasterMindWindow {
 		ayuda = new JMenu("Help");
 		comoJugar = new JMenuItem("Como jugar");
 		acercaDe = new JMenuItem("Acerca de");
+		nuevoJuego = new JMenuItem("New Game");
+		salir = new JMenuItem("Exit");
 		menuBar.add(archivo);
 		menuBar.add(ayuda);
 		ayuda.add(comoJugar);
 		ayuda.add(acercaDe);
+		archivo.add(nuevoJuego);
+		archivo.add(salir);
 		
 		JPanel panel = new JPanel();
 		panel.setBackground(Color.WHITE);
@@ -73,8 +82,31 @@ public class MasterMindWindow {
 		panel_1.setBackground(Color.WHITE);
 		panel_1.setBounds(350, 152, 266, 60);
 		frame.getContentPane().add(panel_1);
+		
+		JPanel panel_2 = new JPanel();
+		panel_2.setBackground(Color.WHITE);
+		panel_2.setBounds(23, 105, 266, 156);
+		
+		
+		JLabel lblNewLabel_2 = new JLabel("Seleccion de colores");
+		lblNewLabel_2.setFont(new Font("Source Code Pro", Font.PLAIN, 15));
+		lblNewLabel_2.setBounds(54, 82, 199, 13);
+		frame.getContentPane().add(lblNewLabel_2);
 		//acercaDe.addActionListener(new Accion());
 		//comoJugar.addActionListener(new Accion());
+		
+		/*PictureBox[] pb = event.crear_linea_bola();
+		//array que recorre los picturebox y los muestra por pantalla
+		for (int i = 0; i < pb.length; i++) {
+			pb[i].setBounds(5, 100, 200, 100);
+			panel_2.add(pb[i]);
+		}*/
+		PictureBox pb = new PictureBox();
+		JButton caca = new JButton("Hola buenas tardes");
+		pb.setVisible(true);
+		panel_2.add(pb);
+		//panel_2.add(caca);
+		frame.getContentPane().add(panel_2);
 
 	}
 }

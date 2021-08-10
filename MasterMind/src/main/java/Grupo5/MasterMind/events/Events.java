@@ -60,7 +60,7 @@ public class Events {
 		// de color Blanco (de momento)
 		for (int i = 0; i < COLORS; i++) {
 			bolas[i] = new PictureBox();
-			bolas[i].setColor(Color.WHITE);
+			bolas[i].setColor(Color.RED);
 		}
 		// devuelve la array de bolas
 		return bolas;
