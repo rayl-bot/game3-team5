@@ -15,7 +15,6 @@ public class MasterMindWindow {
 	public JMenuItem comoJugar, nuevoJuego, salir;
 	public JMenuItem acercaDe;
 	public JPanel pDisponibles,pSecreta,pSelect;
-	private Events event = new Events();
 
 	/**
 	 * Create the application.
