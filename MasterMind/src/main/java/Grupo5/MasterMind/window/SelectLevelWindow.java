@@ -1,7 +1,5 @@
 package Grupo5.MasterMind.window;
 
-import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 import java.awt.GridLayout;
 import java.awt.GridBagLayout;
@@ -25,6 +23,7 @@ import javax.swing.border.BevelBorder;
 
 public class SelectLevelWindow extends JFrame{
 
+	public JRadioButton principiante, medio, avanzado;
 	/**
 	 * Create the application.
 	 */
@@ -57,11 +56,9 @@ public class SelectLevelWindow extends JFrame{
 		btnCancelar.setBounds(199, 288, 94, 28);
 		this.getContentPane().add(btnCancelar);
 		
-		JRadioButton principiante = new JRadioButton("Principiante");
-
-	    JRadioButton medio = new JRadioButton("Medio");
-
-	    JRadioButton avanzado = new JRadioButton("Avanzado");
+		principiante = new JRadioButton("Principiante");
+	    medio = new JRadioButton("Medio");
+	    avanzado = new JRadioButton("Avanzado");
 
 	    //Group the radio buttons.
 	    ButtonGroup group = new ButtonGroup();

@@ -5,6 +5,11 @@ import java.awt.*;
 import javax.swing.*;
 
 import Grupo5.MasterMind.events.Events;
+import net.miginfocom.swing.MigLayout;
+import com.jgoodies.forms.layout.FormLayout;
+import com.jgoodies.forms.layout.ColumnSpec;
+import com.jgoodies.forms.layout.RowSpec;
+import com.jgoodies.forms.layout.FormSpecs;
 
 public class MasterMindWindow {
 
@@ -14,7 +19,9 @@ public class MasterMindWindow {
 	public JMenu ayuda;
 	public JMenuItem comoJugar, nuevoJuego, salir;
 	public JMenuItem acercaDe;
-	public JPanel pDisponibles,pSecreta,pSelect;
+	public JPanel pDisponibles,pSecreta, pResultado;
+	public Button button;
+	private Button button_1;
 
 	/**
 	 * Create the application.
@@ -33,7 +40,7 @@ public class MasterMindWindow {
 		frame = new JFrame();
 		frame.getContentPane().setBackground(UIManager.getColor("Button.background"));
 		frame.setTitle("Master Mind");
-		frame.setBounds(100, 100, 640, 378);
+		frame.setBounds(100, 100, 913, 561);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
 		
@@ -43,12 +50,12 @@ public class MasterMindWindow {
 		 */
 		frame.getContentPane().setLayout(null);
 		JLabel lblNewLabel = new JLabel("Colores disponibles");
-		lblNewLabel.setBounds(360, 41, 199, 13);
+		lblNewLabel.setBounds(690, 36, 199, 13);
 		lblNewLabel.setFont(new Font("Source Code Pro", Font.PLAIN, 15));
 		frame.getContentPane().add(lblNewLabel);
 
 		JLabel lblNewLabel_1 = new JLabel("Combinacion secreta");
-		lblNewLabel_1.setBounds(360, 129, 199, 13);
+		lblNewLabel_1.setBounds(690, 129, 199, 13);
 		lblNewLabel_1.setFont(new Font("Source Code Pro", Font.PLAIN, 15));
 		frame.getContentPane().add(lblNewLabel_1);
 
@@ -73,33 +80,49 @@ public class MasterMindWindow {
 		
 		pDisponibles = new JPanel();
 		pDisponibles.setBackground(Color.WHITE);
-		pDisponibles.setBounds(350, 59, 266, 60);
+		pDisponibles.setBounds(623, 59, 266, 60);
 		frame.getContentPane().add(pDisponibles);
 		
 		pSecreta = new JPanel();
 		pSecreta.setBackground(Color.WHITE);
-		pSecreta.setBounds(350, 152, 266, 60);
+		pSecreta.setBounds(623, 152, 266, 60);
 		frame.getContentPane().add(pSecreta);
 		
-		pSelect = new JPanel();
-		pSelect.setBackground(Color.WHITE);
-		pSelect.setBounds(23, 105, 266, 156);
 		
-		
-		JLabel lblNewLabel_2 = new JLabel("Seleccion de colores");
+		JLabel lblNewLabel_2 = new JLabel("Tablero de Juego");
 		lblNewLabel_2.setFont(new Font("Source Code Pro", Font.PLAIN, 15));
-		lblNewLabel_2.setBounds(54, 82, 199, 13);
+		lblNewLabel_2.setBounds(218, 83, 150, 13);
 		frame.getContentPane().add(lblNewLabel_2);
-		//acercaDe.addActionListener(new Accion());
-		//comoJugar.addActionListener(new Accion());
 		
-		/*PictureBox[] pb = event.crear_linea_bola();
-		//array que recorre los picturebox y los muestra por pantalla
-		for (int i = 0; i < pb.length; i++) {
-			panel2.add(pb[i]);
-		}*/
+		pResultado = new JPanel();
+		pResultado.setBackground(Color.WHITE);
+		pResultado.setBounds(309, 106, 266, 285);
+		frame.getContentPane().add(pResultado);
+		GridBagLayout gbl_pResultado = new GridBagLayout();
+		gbl_pResultado.columnWidths = new int[]{0};
+		gbl_pResultado.rowHeights = new int[]{0};
+		gbl_pResultado.columnWeights = new double[]{Double.MIN_VALUE};
+		gbl_pResultado.rowWeights = new double[]{Double.MIN_VALUE};
+		pResultado.setLayout(gbl_pResultado);
 		
-		frame.getContentPane().add(pSelect);
+		JPanel pResultado_1 = new JPanel();
+		pResultado_1.setBackground(Color.WHITE);
+		pResultado_1.setBounds(42, 106, 266, 285);
+		frame.getContentPane().add(pResultado_1);
+		pResultado_1.add(button, "14, 2");
+		GridBagLayout gbl_pResultado_1 = new GridBagLayout();
+		gbl_pResultado_1.columnWidths = new int[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+		gbl_pResultado_1.rowHeights = new int[]{0, 0};
+		gbl_pResultado_1.columnWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
+		gbl_pResultado_1.rowWeights = new double[]{0.0, Double.MIN_VALUE};
+		pResultado_1.setLayout(gbl_pResultado_1);
+		
+		button_1 = new Button("New button");
+		GridBagConstraints gbc_button_1 = new GridBagConstraints();
+		gbc_button_1.insets = new Insets(0, 0, 0, 5);
+		gbc_button_1.gridx = 7;
+		gbc_button_1.gridy = 0;
+		pResultado_1.add(button_1, gbc_button_1);
 
 	}
 }
