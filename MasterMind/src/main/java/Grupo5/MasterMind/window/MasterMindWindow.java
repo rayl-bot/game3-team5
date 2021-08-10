@@ -3,10 +3,8 @@ package Grupo5.MasterMind.window;
 import java.awt.*;
 
 import javax.swing.*;
-import javax.swing.border.BevelBorder;
 
 import Grupo5.MasterMind.events.Events;
-import Grupo5.MasterMind.objects.PictureBox;
 
 public class MasterMindWindow {
 
@@ -16,6 +14,7 @@ public class MasterMindWindow {
 	public JMenu ayuda;
 	public JMenuItem comoJugar, nuevoJuego, salir;
 	public JMenuItem acercaDe;
+	public JPanel pDisponibles,pSecreta,pSelect;
 	private Events event = new Events();
 
 	/**
@@ -73,19 +72,19 @@ public class MasterMindWindow {
 		archivo.add(nuevoJuego);
 		archivo.add(salir);
 		
-		JPanel panel = new JPanel();
-		panel.setBackground(Color.WHITE);
-		panel.setBounds(350, 59, 266, 60);
-		frame.getContentPane().add(panel);
+		pDisponibles = new JPanel();
+		pDisponibles.setBackground(Color.WHITE);
+		pDisponibles.setBounds(350, 59, 266, 60);
+		frame.getContentPane().add(pDisponibles);
 		
-		JPanel panel_1 = new JPanel();
-		panel_1.setBackground(Color.WHITE);
-		panel_1.setBounds(350, 152, 266, 60);
-		frame.getContentPane().add(panel_1);
+		pSecreta = new JPanel();
+		pSecreta.setBackground(Color.WHITE);
+		pSecreta.setBounds(350, 152, 266, 60);
+		frame.getContentPane().add(pSecreta);
 		
-		JPanel panel_2 = new JPanel();
-		panel_2.setBackground(Color.WHITE);
-		panel_2.setBounds(23, 105, 266, 156);
+		pSelect = new JPanel();
+		pSelect.setBackground(Color.WHITE);
+		pSelect.setBounds(23, 105, 266, 156);
 		
 		
 		JLabel lblNewLabel_2 = new JLabel("Seleccion de colores");
@@ -95,12 +94,13 @@ public class MasterMindWindow {
 		//acercaDe.addActionListener(new Accion());
 		//comoJugar.addActionListener(new Accion());
 		
-		PictureBox[] pb = event.crear_linea_bola();
+		/*PictureBox[] pb = event.crear_linea_bola();
 		//array que recorre los picturebox y los muestra por pantalla
 		for (int i = 0; i < pb.length; i++) {
-			panel_2.add(pb[i]);
-		}
-		frame.getContentPane().add(panel_2);
+			panel2.add(pb[i]);
+		}*/
+		
+		frame.getContentPane().add(pSelect);
 
 	}
 }

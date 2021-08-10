@@ -23,7 +23,7 @@ public class App {
 	}
 
 	public static void showWindow() {
-		SelectLevelWindow level = new SelectLevelWindow();
-		//ControllerMMW controlMMW = new ControllerMMW();
+		//SelectLevelWindow level = new SelectLevelWindow();
+		ControllerMMW controlMMW = new ControllerMMW();
 	}
 }

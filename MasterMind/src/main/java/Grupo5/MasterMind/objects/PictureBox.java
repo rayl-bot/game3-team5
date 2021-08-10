@@ -12,7 +12,7 @@ public class PictureBox extends JButton{
 		this.setBorder(null);
 		this.setOpaque(true);
 		this.setContentAreaFilled(false);
-		this.setBackground(Color.RED);
+		this.setBackground(Color.WHITE);
 		this.setForeground(Color.BLACK);
 		this.setPreferredSize(new Dimension(30,30));
 		this.setOpaque(true);
