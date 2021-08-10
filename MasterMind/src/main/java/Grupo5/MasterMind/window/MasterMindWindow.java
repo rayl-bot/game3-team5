@@ -4,13 +4,6 @@ import java.awt.*;
 
 import javax.swing.*;
 
-import Grupo5.MasterMind.events.Events;
-import net.miginfocom.swing.MigLayout;
-import com.jgoodies.forms.layout.FormLayout;
-import com.jgoodies.forms.layout.ColumnSpec;
-import com.jgoodies.forms.layout.RowSpec;
-import com.jgoodies.forms.layout.FormSpecs;
-
 public class MasterMindWindow {
 
 	public JFrame frame;
@@ -19,9 +12,8 @@ public class MasterMindWindow {
 	public JMenu ayuda;
 	public JMenuItem comoJugar, nuevoJuego, salir;
 	public JMenuItem acercaDe;
-	public JPanel pDisponibles,pSecreta, pResultado;
-	public Button button;
-	private Button button_1;
+	public JPanel pDisponibles,pSecreta, pResultado, pSelect;
+	public Button comprobar;
 
 	/**
 	 * Create the application.
@@ -98,31 +90,21 @@ public class MasterMindWindow {
 		pResultado.setBackground(Color.WHITE);
 		pResultado.setBounds(309, 106, 266, 285);
 		frame.getContentPane().add(pResultado);
-		GridBagLayout gbl_pResultado = new GridBagLayout();
-		gbl_pResultado.columnWidths = new int[]{0};
-		gbl_pResultado.rowHeights = new int[]{0};
-		gbl_pResultado.columnWeights = new double[]{Double.MIN_VALUE};
-		gbl_pResultado.rowWeights = new double[]{Double.MIN_VALUE};
-		pResultado.setLayout(gbl_pResultado);
+		pResultado.setLayout(null);
 		
-		JPanel pResultado_1 = new JPanel();
-		pResultado_1.setBackground(Color.WHITE);
-		pResultado_1.setBounds(42, 106, 266, 285);
-		frame.getContentPane().add(pResultado_1);
-		pResultado_1.add(button, "14, 2");
-		GridBagLayout gbl_pResultado_1 = new GridBagLayout();
-		gbl_pResultado_1.columnWidths = new int[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-		gbl_pResultado_1.rowHeights = new int[]{0, 0};
-		gbl_pResultado_1.columnWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
-		gbl_pResultado_1.rowWeights = new double[]{0.0, Double.MIN_VALUE};
-		pResultado_1.setLayout(gbl_pResultado_1);
 		
-		button_1 = new Button("New button");
-		GridBagConstraints gbc_button_1 = new GridBagConstraints();
-		gbc_button_1.insets = new Insets(0, 0, 0, 5);
-		gbc_button_1.gridx = 7;
-		gbc_button_1.gridy = 0;
-		pResultado_1.add(button_1, gbc_button_1);
+		pSelect = new JPanel();
+		pSelect.setLayout(null);
+		pSelect.setBackground(Color.WHITE);
+		pSelect.setBounds(42, 106, 266, 285);
+		frame.getContentPane().add(pSelect);
+		pSelect.setLayout(null);
+		
+		comprobar = new Button("Compr");
+		comprobar.setBounds(190, 10, 66, 21);
+		pSelect.add(comprobar);
+		
+		
 
 	}
 }
