@@ -61,7 +61,7 @@ public class Events {
 	public void comprobarAciertos(PictureBox[] bolasolucion, PictureBox[] bolas, PictureBox[] bolaresul) {
 		int cont = 0, cont2 = 0;
 		for (int i = 0; i < bolas.length; i++) {
-			if (bolasolucion[i].getColor() == bolas[i].getColor()) {
+			if (bolasolucion[i].getBackground().equals(bolas[i].getBackground())) {
 				bolaresul[cont].setColor(Color.black);
 				cont++;
 			}
@@ -69,10 +69,10 @@ public class Events {
 		cont = 0;
 		for (int i = 0; i < bolas.length; i++) {
 			for (int j = 0; j < bolas.length; j++) {
-				if (bolasolucion[i].getColor() == bolas[j].getColor()) {
+				if (bolasolucion[i].getBackground().equals(bolas[j].getBackground())) {
 					cont2++;
 				}
-				if (bolaresul[cont].getColor() != Color.black && cont2 > 0) {
+				if (bolaresul[cont].getBackground().equals(Color.black) && cont2 > 0) {
 					bolaresul[cont].setColor(Color.white);
 				}
 				cont++;
