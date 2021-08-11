@@ -9,7 +9,6 @@ import java.awt.*;
 import java.util.*;
 
 import Grupo5.MasterMind.controller.ControllerMMW;
-import Grupo5.MasterMind.events.Events;
 import Grupo5.MasterMind.objects.PictureBox;
 
 public class App {
@@ -19,8 +18,6 @@ public class App {
 	 */
 	public static void main(String[] args) {
 		// llamamos a la funcion que mostrara la ventana
-		Events evento = new Events();
-		evento.llenarLista();
 		showWindow();
 	}
 	
