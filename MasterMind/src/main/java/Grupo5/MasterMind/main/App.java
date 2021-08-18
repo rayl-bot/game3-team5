@@ -1,18 +1,20 @@
 package Grupo5.MasterMind.main;
+import Grupo5.MasterMind.window.ColorDialog;
+import Grupo5.MasterMind.window.SelectLevelWindow;
 
-/**
- * Hello world!
- *
- */
+public class App {
 
-import java.awt.*;
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		// llamamos a la funcion que mostrara la ventana
+		showWindow();
+	}
 
-
-public class App 
-{
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
-        
-    }
+	public static void showWindow() {
+		//SelectLevelWindow level = new SelectLevelWindow();
+		ColorDialog cd = new ColorDialog();
+		//ControllerMMW controlMMW = new ControllerMMW();
+	}
 }
