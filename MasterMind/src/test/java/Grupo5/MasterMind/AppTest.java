@@ -1,3 +1,4 @@
+
 package Grupo5.MasterMind;
 
 import static org.junit.Assert.assertTrue;
@@ -16,3 +17,4 @@ public class AppTest {
 		assertTrue(true);
 	}
 }
+

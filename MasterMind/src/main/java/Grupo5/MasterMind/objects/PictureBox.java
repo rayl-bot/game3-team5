@@ -1,3 +1,4 @@
+
 package Grupo5.MasterMind.objects;
 
 import java.awt.Color;

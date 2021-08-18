@@ -1,3 +1,4 @@
+
 package Grupo5.MasterMind.main;
 
 /**
@@ -25,5 +26,3 @@ public class App {
 		//SelectLevelWindow level = new SelectLevelWindow();
 		ControllerMMW controlMMW = new ControllerMMW();
 	}
-	
-}
