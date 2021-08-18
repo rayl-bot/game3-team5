@@ -6,6 +6,7 @@ import javax.swing.*;
 
 import Grupo5.MasterMind.controller.ControllerMMW;
 import Grupo5.MasterMind.events.Events;
+import net.miginfocom.swing.MigLayout;
 
 public class MasterMindWindow extends JFrame{
     
@@ -13,7 +14,7 @@ public class MasterMindWindow extends JFrame{
     public JFrame frame;
     public JMenuBar menuBar;
     public JMenu archivo;
-    public JMenu ayuda;
+    public JMenu ayuda, more;
     public JMenuItem comoJugar, nuevoJuego, salir;
     public JMenuItem acercaDe;
     public JPanel pDisponibles,pSecreta, pResultado, pSelect;
@@ -21,7 +22,7 @@ public class MasterMindWindow extends JFrame{
     public JLabel lblNewLabel_1;
     public JLabel lblNewLabel;
     public JLabel lblNewLabel_2;
-    public Events event ;
+    public JMenuItem opciones;
     /**
      * Create the application.
      */
@@ -66,16 +67,20 @@ public class MasterMindWindow extends JFrame{
         frame.getContentPane().add(menuBar);
         archivo = new JMenu("Archivo");
         ayuda = new JMenu("Help");
+        more = new JMenu("More");
         comoJugar = new JMenuItem("Como jugar");
         acercaDe = new JMenuItem("Acerca de");
         nuevoJuego = new JMenuItem("New Game");
+        opciones = new JMenuItem("Opciones");
         salir = new JMenuItem("Exit");
         menuBar.add(archivo);
         menuBar.add(ayuda);
+        menuBar.add(more);
         ayuda.add(comoJugar);
         ayuda.add(acercaDe);
         archivo.add(nuevoJuego);
         archivo.add(salir);
+        more.add(opciones);
         
         pDisponibles = new JPanel();
         pDisponibles.setBackground(Color.WHITE);
@@ -95,17 +100,19 @@ public class MasterMindWindow extends JFrame{
         
         pResultado = new JPanel();
         pResultado.setBackground(Color.yellow);
-        pResultado.setBounds(309, 106, 266, 285);
+        pResultado.setBounds(263, 106, 171, 362);
         frame.getContentPane().add(pResultado);
+        pResultado.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
         
         pSelect = new JPanel();
         pSelect.setBackground(Color.white);
-        pSelect.setBounds(42, 106, 266, 285);
+        pSelect.setBounds(57, 106, 171, 362);
         frame.getContentPane().add(pSelect);
+        pSelect.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
         
         comprobar = new Button("Compr");
-        comprobar.setBounds(190, 10, 66, 21);
-        pSelect.add(comprobar);
+        frame.getContentPane().add(comprobar);
+        comprobar.setBounds(110, 474, 44, 21);
         
     }
 }

@@ -51,7 +51,7 @@ public class SelectLevelWindow extends JFrame{
         btnNewButton = new JButton("Aceptar");
         btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 13));
         btnNewButton.setBounds(53, 290, 94, 25);
-        this.getContentPane().add(btnNewButton);
+        this.getContentPane().add(btnNewButton); 
         
         btnCancelar = new JButton("Cancelar");
         btnCancelar.setFont(new Font("Tahoma", Font.PLAIN, 13));

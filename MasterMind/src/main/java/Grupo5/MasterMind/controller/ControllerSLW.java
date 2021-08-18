@@ -7,6 +7,7 @@ public class ControllerSLW implements ActionListener{
 	
 	private SelectLevelWindow window;
 	private ControllerMMW cMMW;
+	private ControllerOpciones ccd;
 	public ControllerSLW()
 	{
 		this.window = new SelectLevelWindow();
@@ -16,11 +17,11 @@ public class ControllerSLW implements ActionListener{
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == window.btnNewButton) {
 			if(window.principiante.isSelected()) {
-				cMMW = new ControllerMMW();
+				cMMW = new ControllerMMW(0);
 				window.dispose();
 			}
 			else if (window.medio.isSelected()) {
-				cMMW = new ControllerMMW(1);
+				cMMW = new ControllerMMW(1); 
 				window.dispose();
 			}
 			else if (window.avanzado.isSelected()) {
@@ -29,7 +30,7 @@ public class ControllerSLW implements ActionListener{
 			}
 		}else if(e.getSource() == window.btnCancelar)
 		{
-			cMMW = new ControllerMMW();
+			cMMW = new ControllerMMW(0);
 			window.dispose();
 		}
 	}

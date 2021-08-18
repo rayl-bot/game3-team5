@@ -16,7 +16,7 @@ public class PictureBox extends JButton{
 		this.setBorder(null);
 		this.setOpaque(true);
 		this.setContentAreaFilled(false);
-		this.setBackground(Color.RED);
+		this.setBackground(Color.yellow);
 		this.setForeground(Color.BLACK);
 		this.setPreferredSize(new Dimension(30,30));
 		this.setOpaque(true);
@@ -25,5 +25,10 @@ public class PictureBox extends JButton{
 	public void setColor(Color c) {
 		this.setBackground(c);
 		this.setForeground(Color.BLACK);
+	}
+	public PictureBox copiar(PictureBox p) {
+		PictureBox aux = new PictureBox();
+		aux.setBackground(p.getBackground());
+		return aux;
 	}
 }
