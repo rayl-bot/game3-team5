@@ -17,7 +17,6 @@ public class App {
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
-		// llamamos a la funcion que mostrara la ventana
 		showWindow();
 	}
 	
@@ -25,5 +24,8 @@ public class App {
 		//SelectLevelWindow level = new SelectLevelWindow();
 		ControllerMMW controlMMW = new ControllerMMW();
 	}
+<<<<<<< Updated upstream
 	
+=======
+>>>>>>> Stashed changes
 }
