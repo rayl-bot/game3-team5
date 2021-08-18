@@ -1,7 +1,12 @@
+<<<<<<< Updated upstream
 
 package Grupo5.MasterMind.window;
 
 
+=======
+
+package Grupo5.MasterMind.window;
+>>>>>>> Stashed changes
 
 import javax.swing.JFrame;
 import java.awt.GridLayout;
@@ -16,6 +21,7 @@ import javax.swing.border.BevelBorder;
 
 public class SelectLevelWindow extends JFrame{
 
+<<<<<<< Updated upstream
     /**
 	 * 
 	 */
@@ -23,6 +29,9 @@ public class SelectLevelWindow extends JFrame{
 	/**
      * Create the application.
      */
+=======
+	private static final long serialVersionUID = 1L; 
+>>>>>>> Stashed changes
     public JButton btnNewButton;
     public JButton btnCancelar;
     public JRadioButton principiante;

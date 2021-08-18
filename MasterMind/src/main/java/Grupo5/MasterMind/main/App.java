@@ -1,23 +1,18 @@
 
 package Grupo5.MasterMind.main;
 
-/**
- * Hello world!
- *
+/***
+ * MasterMind (Raúl, Álvaro, Evelyn)
  */
 
-import java.awt.*;
-import java.util.*;
-
 import Grupo5.MasterMind.controller.ControllerMMW;
-import Grupo5.MasterMind.objects.PictureBox;
-
 public class App {
 	
-	/**
-	 * Launch the application.
-	 */
+	@SuppressWarnings("unused")
+	private static ControllerMMW controlMMW;
+
 	public static void main(String[] args) {
+<<<<<<< Updated upstream
 		// llamamos a la funcion que mostrara la ventana
 		showWindow();
 	}
@@ -26,3 +21,11 @@ public class App {
 		//SelectLevelWindow level = new SelectLevelWindow();
 		ControllerMMW controlMMW = new ControllerMMW();
 	}
+=======
+		
+		controlMMW = new ControllerMMW();
+		
+	}
+	
+}
+>>>>>>> Stashed changes

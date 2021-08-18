@@ -5,10 +5,13 @@ import java.awt.*;
 
 import javax.swing.*;
 
+<<<<<<< Updated upstream
 import Grupo5.MasterMind.controller.ControllerMMW;
 import Grupo5.MasterMind.events.Events;
 import net.miginfocom.swing.MigLayout;
 
+=======
+>>>>>>> Stashed changes
 public class MasterMindWindow extends JFrame{
     
     private static final long serialVersionUID = 1L;

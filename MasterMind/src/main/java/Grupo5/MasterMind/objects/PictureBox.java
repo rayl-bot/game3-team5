@@ -6,13 +6,19 @@ import java.awt.Dimension;
 import javax.swing.JButton;
 
 public class PictureBox extends JButton{
+
+	private static final long serialVersionUID = 1L;
 	
+<<<<<<< Updated upstream
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 	
 	public PictureBox () {
+=======
+	public PictureBox () { //contructor por defecto
+>>>>>>> Stashed changes
 		super();
 		this.setBorder(null);
 		this.setOpaque(true);

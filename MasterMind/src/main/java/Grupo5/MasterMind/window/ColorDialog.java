@@ -10,7 +10,15 @@ import java.awt.Button;
 
 public class ColorDialog extends JFrame {
 
+<<<<<<< Updated upstream
     public JColorChooser tcc;
+=======
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	public JColorChooser tcc;
+>>>>>>> Stashed changes
     public JLabel banner;
     public Button aceptar, cancelar;
 
